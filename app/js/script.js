@@ -13,7 +13,10 @@ submit.addEventListener("click", () => {
     if (n > -1) {
       permState.style.display = "none";
       resultState.style.display = "flex";
-      let array = findPermutations(String(n));
+      let aux = findPermutations(String(n));
+      let array = [];
+      for (let i = 0; i < aux.length; i++)
+        if (aux[i].charAt(0) != "0") array.push(aux[i]);
       lst.innerText = array;
       S.innerText = array.length;
       console.log(array);
@@ -43,11 +46,5 @@ let findPermutations = (string) => {
     }
   }
 
-  let permutationsArray_wo0 = [];
-  for (let i = 0; i < permutationsArray.length; i++) {
-    if (permutationsArray[i][0] != 0)
-      permutationsArray_wo0.push(permutationsArray[i]);
-  }
-
-  return permutationsArray_wo0;
+  return permutationsArray;
 };
