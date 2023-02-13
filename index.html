@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="//static.vecteezy.com/system/resources/previews/010/898/160/original/gamecube-white-dice-png.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Public+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Calculate permutations</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--Permutation state start -->
+    <section class="perm-n">
+      <div class="perm-n__icon-container">
+        <img
+          class="perm-n__icon-container__icon"
+          src="https://static.vecteezy.com/system/resources/previews/010/898/160/original/gamecube-white-dice-png.png"
+          alt="Star"
+        />
+      </div>
+      <h2 class="perm-n__title">Permutations</h2>
+      <p class="perm-n__paragraph">
+        Please insert a natural number to calculate it's permutations.
+      </p>
+      <input
+        type="number"
+        class="perm-n__input"
+        id="ninput"
+        placeholder="1234567"
+      />
+      <button class="perm-n__button">Submit</button>
+    </section>
+
+    <!-- Permutation state end -->
+
+    <!--Result state start -->
+
+    <section class="result-state">
+      <img
+        class="result-state__image"
+        src="images/illustration-thank-you.svg"
+        alt="illustration-thank-you"
+      />
+      <div class="result-state__result">
+        You typed <span class="result-state__number"> </span>
+      </div>
+      <h2 class="result-state__title">Result</h2>
+      <p class="result-state__paragraph">
+        S = <span class="result-state__S"> </span>
+      </p>
+    </section>
+    <!-- Result state end -->
+    <div class="perms">
+      <span class="perms__lst"></span>
+    </div>
+
+    <footer class="attribution">
+      Coded by
+      <a target="_blank" href="https://github.com/Gaoux">Gustavo Parra</a> y
+      <a target="_blank" href="/">Juan Torres</a>.
+    </footer>
+
+    <script src="app/js/script.js"></script>
+  </body>
+</html>

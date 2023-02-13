@@ -1,0 +1,168 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+  background-color: $VeryDarkBlue;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.perm-n,
+.result-state {
+  background-color: $DarkBlue;
+  width: 327px;
+  height: 364px;
+  border-radius: 16px;
+  margin: 195px auto 80px;
+  padding: 24px;
+
+  &__title {
+    color: $White;
+    margin-bottom: 22px;
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+
+  &__paragraph {
+    color: $LightGrey;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+  }
+}
+.result-state {
+  height: 340px;
+  margin-bottom: 0;
+  &__paragraph {
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+  }
+}
+.perm-n {
+  &__icon-container {
+    background-color: $MediumGrey;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    place-content: center;
+    margin-bottom: 22px;
+
+    &__icon {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 44px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 27px;
+    background-color: $Orange;
+    text-transform: uppercase;
+    color: $White;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  &__input {
+    width: 100%;
+    height: 44px;
+    background-color: $MediumGrey;
+    text-align: center;
+    border: solid 0.2px $LightGrey;
+    border-radius: 8px;
+    height: 32px;
+    font-size: 16px;
+    padding: 8px;
+    letter-spacing: 2px;
+    margin-top: 16px;
+    margin-bottom: 18px;
+    color: $White;
+  }
+
+  &__button:hover {
+    color: $Orange;
+    background-color: $White;
+    cursor: pointer;
+  }
+}
+
+//--------------------------------- result State
+.result-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    width: 150px;
+    margin-bottom: 24px;
+  }
+
+  &__result {
+    background-color: $MediumGrey;
+    width: 170px;
+    height: 36px;
+    border-radius: 50px;
+    color: $Orange;
+    text-align: center;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+  }
+
+  &__paragraph {
+    text-align: center;
+  }
+}
+//Links
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+.attribution {
+  color: $LightGrey;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.perms {
+  color: white;
+  width: 100%;
+  padding: 32px;
+  word-wrap: break-word;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .rating-state,
+  .result-state {
+    width: 412px;
+    height: 412px;
+    padding: 24px;
+  }
+  .result-state {
+    width: 412px;
+    height: 340px;
+    width: 412px;
+  }
+}
